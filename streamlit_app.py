@@ -2,12 +2,7 @@
 import streamlit as st
 from snowflake.snowpark.functions import col
 import requests
-
-@st.cache_resource
-def get_session():
-    return create_session()
-
-session = get_session()
+from snowflake.snowpark import Session
 
 # Write directly to the app.
 st.title(":cup_with_straw: Customize Your Smoothie :cup_with_straw:")
