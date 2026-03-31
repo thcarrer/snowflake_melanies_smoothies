@@ -2,7 +2,17 @@
 import streamlit as st
 from snowflake.snowpark.functions import col
 import requests
-from snowflake.snowpark import session
+from snowflake.snowpark import Session
+
+session = Session.builder.configs({
+    "account": "QJSTGBN-AP48396",
+    "user": "ThomasC",
+    "password": "Pirjin6956snow_",
+    "role": "SYSADMIN",
+    "warehouse": "COMPUTE_WH",
+    "database": "SMOOTHIES",
+    "schema": "PUBLIC"
+}).create()
 
 # Write directly to the app.
 st.title(":cup_with_straw: Customize Your Smoothie :cup_with_straw:")
